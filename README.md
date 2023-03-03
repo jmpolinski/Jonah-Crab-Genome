@@ -1,1 +1,1 @@
-# Jonah Crab Genome 
+# Jonah Crab (*Cancer borealis*) Genome 
