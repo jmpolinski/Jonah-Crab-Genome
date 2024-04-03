@@ -7,7 +7,7 @@ Genome assembly and raw sequencing data can be found in NCBI BioProject XXXXX (a
 ## Sample information 
 
 ## Library prep and sequencing
-DNA extraction, library prep, and sequencing were performed by Dovetail Genomics, funded by a Revive & Restore Wild Genomes grant. Three long-read libraries were generated - one HiFi and two CLR, due to difficulties generating additional HiFi libraries. Dovetail Genomics also generated Omni-C data for scaffolding.  
+DNA extraction, library prep, and sequencing were performed by Dovetail Genomics, funded by a Revive & Restore Wild Genomes grant. Three PacBio CLR libraries were generated. Libraries were CLR, rather than HiFi, due to difficulties generating additional HiFi libraries. Dovetail Genomics also generated Omni-C data for scaffolding.  
   
 
 ## Genome assembly
