@@ -21,7 +21,7 @@ ln -s ../../JC-genome_v1_mitoG.fasta.fai
 2) Created a text files with the chromosome and coordinates to be replaced with N's (used multiples of 80 since the genome files lines are 80 characters)
 3) for loop to pull out those regions:
 ```
-for i in `cat mito-regions-to-N`; do samtools faidx JC-genome_v1_mitoG.fasta ${i} > ${i}_N.fa; done
+for i in `cat regions-to-N_mt`; do samtools faidx JC-genome_v1_mitoG.fasta ${i} > ${i}_N.fa; done
 for i in `cat regions-to-keep`; do samtools faidx JC-genome_v1_mitoG.fasta ${i} > ${i}_ok.fa; done
 ```
 4) substitute A/C/T/G's for N's:
