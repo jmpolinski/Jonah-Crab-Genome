@@ -1,7 +1,7 @@
 #!/bin/bash 
 # Selection of Species for Ortholog Analysis
 
-cd /data/prj/Fisheries/JonahCrabGenome/Analyses/8_gainLoss
+cd /data/prj/Fisheries/JonahCrabGenome/Analyses/10_orthology
 
 mkdir proteins && cd proteins
 module load busco/v5.4.5

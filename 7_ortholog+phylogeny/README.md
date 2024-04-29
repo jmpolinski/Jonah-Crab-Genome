@@ -38,3 +38,38 @@ BUSCO results (species not included; <85% complete):
   
   
 
+## OrthoFinder ortholog identification
+[OrthoFinder](https://github.com/davidemms/OrthoFinder) was used to identify groups of orthologous genes ("orthogroups") and generate a preliminary phylogenetic tree.   
+See ```2_orthofinder.sh```  
+
+## Time-scaled phylogenetic tree 
+I used the [MEGA Timetree Wizard](https://www.megasoftware.net/web_help_11/Part_I_Getting_Started/A_Walk_Through_MEGA/Constructing_a_Timetree_(ML).htm) to make the phylogeneteic tree time-scaled.
+To do this, I needed a tree, a sequence alignment, and time calibration points.  
+
+Protein alignment: I used MUSCLE v5.1 to generate protein alignments for all single-copy orthologs identified by OrthoFinder, and then used [Gblocks](https://home.cc.umanitoba.ca/~psgendb/doc/Castresana/Gblocks_documentation.html) to extract conserved, well-aligned blocks from each of these and put them in a concatenated file. 
+Code can be found in ```3_time-tree-alignments.sh```.   
+
+Tree: I used the OrthoFinder tree with no branch lengths or confidence values (below)
+```
+((Bombus,Dmel),((Dpulex,Dmagna),((Lsalmonis,Tcalifornicus),(Hazteca,((Esinensis,(Ptrituberculatus,Cborealis)),((Hamericanus,Pclarkii),(Pjaponicus,(Lvannamei,Pchinensis))))))));
+```
+In MEGA (Windows GUI):
+- Select Clock --> Compute Time Tree --> RelTime-ML
+- The alignment (saved as .meg file) from above was input as the sequence data
+- The tree above was input as the tree file
+- The branch with D. melanogaster and B. pyrosoma was selected as the outgroup
+- Calibration nodes were as follows: C. borealis - P. trituberculatus (max 225.0 MYA), L. vannamei - P. chinensis (>57.8<108.3; uniform distribution), H. americanus - P. clarkii (>241.0<321.6; uniform dist.), D. magna - T. californicus (275-541, uniform dist.) (from [TimeTree.org](timetree.org))
+- Analysis preferences all default (JTT model; uniform rates among sites; use all sites)
+
+## CAFE gene family expansion/contraction
+The OrthoFinder output count table (in Results/Orthogroups/Orthogroups.GeneCount.tsv) was reformatted for CAFE:
+- renamed first column "Desc"
+- added new second column "Family ID", which was just the number part of the Orthogroup ID (i.e. OG0000001 = 1; note that OG0000000 could not be 0 so was highest number)
+- saved as "counts4cafe_2024-04.txt"  
+Checked if dataset needed filtering:
+```
+module load cafe/v4.2.1
+python /data/resources/app_modules/CAFE/python_scripts/clade_size_filter.py -i counts4cafe_2024-04.txt -o filtered_cafe_input_2024-04.txt -s
+# "No filtering was done!" output
+```
+Modified CAFE scipt and ran: ```./cafe_20240429.sh```
