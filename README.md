@@ -2,7 +2,7 @@
 
 A reference genome was generated using PacBio CLR and Omni-C data.  
   
-Genome assembly and raw sequencing data can be found in NCBI BioProject XXXXX (add link).  
+Genome assembly and raw sequencing data can be found in NCBI BioProject PRJNA1097536. This Whole Genome Shotgun project has been deposited at DDBJ/ENA/GenBank under the accession JBCDWE000000000.  
 
 ## Sample information 
 The Jonah crab used for the reference genome was a male (carapace width = 175mm) harvested from the Gulf of Maine in May 2021 and purchased from the Fresh Lobster Company (Gloucester, MA).
