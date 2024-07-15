@@ -6,10 +6,12 @@ Genome assembly and raw sequencing data can be found in NCBI BioProject PRJNA109
 
 ## Sample information 
 The Jonah crab used for the reference genome was a male (carapace width = 175mm) harvested from the Gulf of Maine in May 2021 and purchased from the Fresh Lobster Company (Gloucester, MA).
-Several tissues (walking leg muscle, haemocytes, gill, and hepatopancreas) were dissected from the individual and placed in individual 2mL cryovials before being flash-frozen in liquid nitrogen and stored at -80°C until shipment. Frozen muscle tissue was shipped on dry ice to Dovetail Genomics for library prep and sequencing.
+Several tissues (gonad, walking leg muscle, haemocytes, gill, and hepatopancreas) were dissected from the individual and placed in individual 2mL cryovials before being flash-frozen in liquid nitrogen and stored at -80°C until shipment. Frozen gonad and muscle tissue was shipped on dry ice to Dovetail Genomics for library prep and sequencing.
 
 ## Library prep and sequencing
-DNA extraction, library prep, and sequencing were performed by Dovetail Genomics, funded by a Revive & Restore Wild Genomes grant. Three PacBio CLR libraries were generated. Libraries were CLR, rather than HiFi, due to difficulties generating additional HiFi libraries. Dovetail Genomics also generated Omni-C data for scaffolding.  
+DNA extraction, library prep, and sequencing were performed by Dovetail Genomics, funded by a Revive & Restore Wild Genomes grant. 
+Three PacBio CLR libraries were generated with DNA from gonad tissue. Libraries were CLR, rather than HiFi, due to difficulties generating additional HiFi libraries. 
+Dovetail Genomics also generated Omni-C data for scaffolding using muscle tissue.  
   
 
 ## Genome assembly & analyses
